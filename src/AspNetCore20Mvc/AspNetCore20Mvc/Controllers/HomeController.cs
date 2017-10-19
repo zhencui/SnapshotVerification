@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCore20Mvc.Models;
+using SnapshotTest;
 
 namespace AspNetCore20Mvc.Controllers
 {
@@ -25,7 +26,7 @@ namespace AspNetCore20Mvc.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
+            CPUIntensiveComputation.RecusiveCall1(12);
             return View();
         }
 
