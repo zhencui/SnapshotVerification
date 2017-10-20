@@ -20,4 +20,6 @@
     <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
+  <Import Project="..\SharedCode\SharedCode.projitems" Label="Shared" />
+
 </Project>

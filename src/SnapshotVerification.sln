@@ -7,7 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore20Mvc", "AspNetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet46Mvc", "AspNet46Mvc\AspNet46Mvc.csproj", "{0EE84680-BFF5-4053-BC5F-BE6778FCCD2F}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedCode", "SharedCode\SharedCode.shproj", "{62A22B80-A111-440F-884C-C2C943A46B51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRequestSender", "SimpleRequestSender\SimpleRequestSender.csproj", "{B32659A4-2F74-46CE-8206-37671FC0B387}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedCode\SharedCode.projitems*{62a22b80-a111-440f-884c-c2c943a46b51}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -21,6 +28,10 @@ Global
 		{0EE84680-BFF5-4053-BC5F-BE6778FCCD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE84680-BFF5-4053-BC5F-BE6778FCCD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE84680-BFF5-4053-BC5F-BE6778FCCD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32659A4-2F74-46CE-8206-37671FC0B387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32659A4-2F74-46CE-8206-37671FC0B387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
