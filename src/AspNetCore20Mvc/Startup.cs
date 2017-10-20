@@ -21,6 +21,7 @@ namespace AspNetCore20Mvc
             {
                 SnapshotCollectorConfiguration configuration = new SnapshotCollectorConfiguration()
                 {
+                    IsEnabled = false,
                     //IsEnabledInDeveloperMode = true,
                     ProblemCounterResetInterval = TimeSpan.FromMinutes(10),
                     SnapshotsPerTenMinutesLimit = 500,

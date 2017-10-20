@@ -11,6 +11,10 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedCode", "SharedCode\Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRequestSender", "SimpleRequestSender\SimpleRequestSender.csproj", "{B32659A4-2F74-46CE-8206-37671FC0B387}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapRestartApp1", "SnapRestartApp1\SnapRestartApp1.csproj", "{745D93BC-42CC-49CC-864C-37AB31F42299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapRestartApp2", "SnapRestartApp2\SnapRestartApp2.csproj", "{944F6862-4D57-4DBD-9EC4-B59E279B5D43}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedCode\SharedCode.projitems*{62a22b80-a111-440f-884c-c2c943a46b51}*SharedItemsImports = 13
@@ -32,6 +36,14 @@ Global
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{745D93BC-42CC-49CC-864C-37AB31F42299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745D93BC-42CC-49CC-864C-37AB31F42299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{745D93BC-42CC-49CC-864C-37AB31F42299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745D93BC-42CC-49CC-864C-37AB31F42299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944F6862-4D57-4DBD-9EC4-B59E279B5D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944F6862-4D57-4DBD-9EC4-B59E279B5D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944F6862-4D57-4DBD-9EC4-B59E279B5D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944F6862-4D57-4DBD-9EC4-B59E279B5D43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
