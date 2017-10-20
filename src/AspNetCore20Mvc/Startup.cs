@@ -21,6 +21,7 @@ namespace AspNetCore20Mvc
             {
                 SnapshotCollectorConfiguration configuration = new SnapshotCollectorConfiguration()
                 {
+                    //IsEnabledInDeveloperMode = true,
                     SnapshotsPerTenMinutesLimit = 500,
                     ThresholdForSnapshotting = 1,   // How many times we need to see an exception before we ask for snapshots. Default is 5. The value cannot be less than 1.
                     MaximumSnapshotsRequired = 5,   //The maximum number of snapshots we collect for a single problem. Default is 3. The value must be between 1 and 999.
@@ -42,9 +43,6 @@ namespace AspNetCore20Mvc
         {
             services.AddSingleton<ITelemetryProcessorFactory>(new SnapshotCollectorTelemetryProcessorFactory());
             services.AddMvc();
-
-            TelemetryClient client = new TelemetryClient();
-            client.TrackEvent("SiteStart");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
