@@ -22,9 +22,10 @@ namespace AspNetCore20Mvc
                 SnapshotCollectorConfiguration configuration = new SnapshotCollectorConfiguration()
                 {
                     //IsEnabledInDeveloperMode = true,
+                    ProblemCounterResetInterval = TimeSpan.FromMinutes(10),
                     SnapshotsPerTenMinutesLimit = 500,
                     ThresholdForSnapshotting = 1,   // How many times we need to see an exception before we ask for snapshots. Default is 5. The value cannot be less than 1.
-                    MaximumSnapshotsRequired = 5,   //The maximum number of snapshots we collect for a single problem. Default is 3. The value must be between 1 and 999.
+                    MaximumSnapshotsRequired = 900,   //The maximum number of snapshots we collect for a single problem. Default is 3. The value must be between 1 and 999.
                     SnapshotsPerDayLimit = 0      // The maximum number of snapshots allowed in one day (24 hours). Default is 50. 0 means not limit. The limit must not be negative.
                 };
                 return new SnapshotCollectorTelemetryProcessor(next, configuration);

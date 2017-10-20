@@ -44,6 +44,7 @@ namespace SimpleRequestSender
                 {
                     try
                     {
+                        await BlockAsync().ConfigureAwait(false);
                         cnt = (cnt + 1) % (ulong.MaxValue - 100);
                         var client = new HttpClient();
                         var rst = await client.GetAsync(url).ConfigureAwait(false);
@@ -51,6 +52,19 @@ namespace SimpleRequestSender
                     }
                     catch { }
                 }
+            }
+        }
+
+        private async Task BlockAsync()
+        {
+            while (true)
+            {
+                var minute = DateTime.Now.Minute;
+                if ((minute / 15) % 2 == 0)
+                {
+                    return;
+                }
+                await Task.Delay(10000).ConfigureAwait(false);
             }
         }
 
