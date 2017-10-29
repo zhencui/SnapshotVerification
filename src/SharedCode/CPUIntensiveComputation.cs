@@ -59,7 +59,7 @@ namespace SnapshotTest
             {
                 // both 'randomNumber' and 'primeNumber' should show up in snapshot view as local variables.
                 int randomNumber = _rand.Next() % 300;
-                long primeNumber = FindNthPrimeNumber(randomNumber);
+                long primeNumber = FindNthPrimeNumber(randomNumber) + 500;
                 if (primeNumber > 500)
                 {
                     throw new ValueBiggerThan500Exception(primeNumber);
