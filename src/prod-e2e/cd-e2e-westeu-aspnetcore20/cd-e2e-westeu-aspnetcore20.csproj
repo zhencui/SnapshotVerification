@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/5c646981-9519-47bf-8cf4-57deb52db279/resourcegroups/cd-e2e-prod-westeu/providers/microsoft.insights/components/cd-e2e-westeu-aspnetcore20</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/5c646981-9519-47bf-8cf4-57deb52db279/resourcegroups/cd-e2e-prod-westeu/providers/microsoft.insights/components/cd-e2e-westeu-aspnetcore20</ApplicationInsightsAnnotationResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
