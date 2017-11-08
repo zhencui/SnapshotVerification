@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.ApplicationInsights;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,11 @@ namespace cd_e2e_westeu_aspnet46
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            TelemetryClient client = new TelemetryClient();
+            // This is used for detect site restart.
+            client.TrackEvent("SiteStart");
+            client.Flush();
         }
     }
 }

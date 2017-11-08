@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.ApplicationInsights;
 
 namespace cd_e2e_westeu_aspnetcore20
 {
@@ -17,10 +18,19 @@ namespace cd_e2e_westeu_aspnetcore20
             BuildWebHost(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            var host = WebHost.CreateDefaultBuilder(args)
                 .UseApplicationInsights()
                 .UseStartup<Startup>()
                 .Build();
+
+            TelemetryClient client = new TelemetryClient();
+            // This is used for detect site restart.
+            client.TrackEvent("SiteStart");
+            client.Flush();
+
+            return host;
+        }
     }
 }
