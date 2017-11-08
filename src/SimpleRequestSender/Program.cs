@@ -16,7 +16,11 @@ namespace SimpleRequestSender
                 "http://aspnetcore20mvc.azurewebsites.net/Home/About",
                 "http://aspnetcore20mvc.azurewebsites.net/Home/Contact",
                 "http://aspnet46mvc.azurewebsites.net/Home/About",
-                "http://aspnet46mvc.azurewebsites.net/Home/Contact"
+                "http://aspnet46mvc.azurewebsites.net/Home/Contact",
+                "http://cd-e2e-westus2-aspnet46.azurewebsites.net/Home/Contact",
+                "http://cd-e2e-westus2-aspnetcore20.azurewebsites.net/Home/Contact",
+                "http://cd-e2e-westeu-aspnet46.azurewebsites.net/Home/Contact",
+                "http://cd-e2e-westeu-aspnetcore20.azurewebsites.net/Home/Contact"
             };
 
             using (var sender = new RequestSender(urls))
