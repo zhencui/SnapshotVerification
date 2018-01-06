@@ -13,14 +13,18 @@ namespace SimpleRequestSender
             // Change this to the url you want to ping.
             List<string> urls = new List<string>
             {
-                "http://cd-e2e-westeu-aspnet46-site.azurewebsites.net/Home/Contact",
-                "http://cd-e2e-westeu-aspnetcore20-site.azurewebsites.net/Home/Contact",
-                "http://cd-e2e-westus2-aspnet46-site.azurewebsites.net/Home/Contact",
-                "http://cd-e2e-westus2-aspnetcore20-site.azurewebsites.net/Home/Contact",
-                "http://cd-e2e-westeu-aspnet46-site.azurewebsites.net/Home/About",
-                "http://cd-e2e-westeu-aspnetcore20-site.azurewebsites.net/Home/About",
-                "http://cd-e2e-westus2-aspnet46-site.azurewebsites.net/Home/About",
-                "http://cd-e2e-westus2-aspnetcore20-site.azurewebsites.net/Home/About"
+                "http://cd-248-aspnet46-110.azurewebsites.net/Home/About",
+                "http://cd-248-aspnet46-110.azurewebsites.net/Home/Contact",
+                "http://cd-248-aspnetcore20-110.azurewebsites.net/Home/About",
+                "http://cd-248-aspnetcore20-110.azurewebsites.net/Home/Contact",
+                "https://cd-248-aspnet46-110-248.azurewebsites.net/Home/About",
+                "https://cd-248-aspnet46-110-248.azurewebsites.net/Home/Contact",
+                "https://cd-248-aspnetcore20-110-248.azurewebsites.net/Home/About",
+                "https://cd-248-aspnetcore20-110-248.azurewebsites.net/Home/Contact",
+                "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/About",
+                "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/Contact",
+                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/About",
+                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/Contact"
             };
 
             using (var sender = new RequestSender(urls))

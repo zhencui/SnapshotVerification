@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ApplicationInsightsResourceId>/subscriptions/d21a525e-7c86-486d-a79e-a4f3622f639a/resourcegroups/cti-snapshot-ai/providers/microsoft.insights/components/AspNet46Mvc</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/d21a525e-7c86-486d-a79e-a4f3622f639a/resourcegroups/cd-248-verification/providers/microsoft.insights/components/cd-248-aspnet46-111b4-248</ApplicationInsightsResourceId>
     <ApplicationInsightsAnnotationResourceId>/subscriptions/d21a525e-7c86-486d-a79e-a4f3622f639a/resourcegroups/cti-snapshot-ai/providers/microsoft.insights/components/AspNet46Mvc</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -178,6 +178,9 @@
     </Content>
     <Content Include="Connected Services\Application Insights\ConnectedService.json" />
     <None Include="Properties\PublishProfiles\AspNet46Mvc - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\cd-248-aspnet46-110 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\cd-248-aspnet46-110-248 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\cd-248-aspnet46-111b4-248 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
