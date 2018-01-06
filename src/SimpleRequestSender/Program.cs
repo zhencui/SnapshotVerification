@@ -24,7 +24,9 @@ namespace SimpleRequestSender
                 "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/About",
                 "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/Contact",
                 "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/About",
-                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/Contact"
+                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/Contact",
+                "http://cd-248-aspnetcore20-111b4.azurewebsites.net/Home/About",
+                "http://cd-248-aspnetcore20-111b4.azurewebsites.net/Home/Contact"
             };
 
             using (var sender = new RequestSender(urls))
