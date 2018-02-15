@@ -13,20 +13,14 @@ namespace SimpleRequestSender
             // Change this to the url you want to ping.
             List<string> urls = new List<string>
             {
-                "http://cd-248-aspnet46-110.azurewebsites.net/Home/About",
-                "http://cd-248-aspnet46-110.azurewebsites.net/Home/Contact",
-                "http://cd-248-aspnetcore20-110.azurewebsites.net/Home/About",
-                "http://cd-248-aspnetcore20-110.azurewebsites.net/Home/Contact",
-                "https://cd-248-aspnet46-110-248.azurewebsites.net/Home/About",
-                "https://cd-248-aspnet46-110-248.azurewebsites.net/Home/Contact",
-                "https://cd-248-aspnetcore20-110-248.azurewebsites.net/Home/About",
-                "https://cd-248-aspnetcore20-110-248.azurewebsites.net/Home/Contact",
-                "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/About",
-                "http://cd-248-aspnet46-111b4-248.azurewebsites.net/Home/Contact",
-                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/About",
-                "http://cd-248-aspnetcore20-111b4-248.azurewebsites.net/Home/Contact",
-                "http://cd-248-aspnetcore20-111b4.azurewebsites.net/Home/About",
-                "http://cd-248-aspnetcore20-111b4.azurewebsites.net/Home/Contact"
+                "http://auto-light-up-asp-net46-old.azurewebsites.net/Home/About",
+                "http://auto-light-up-asp-net46-old.azurewebsites.net/Home/Contact",
+                "http://auto-light-up-asp-net-core20-old.azurewebsites.net/Home/About",
+                "http://auto-light-up-asp-net-core20-old.azurewebsites.net/Home/Contact",
+                "http://auto-light-up-asp-net46.azurewebsites.net/Home/About",
+                "http://auto-light-up-asp-net46.azurewebsites.net/Home/Contact",
+                "http://auto-light-up-asp-net-core20.azurewebsites.net/Home/About",
+                "http://auto-light-up-asp-net-core20.azurewebsites.net/Home/Contact"
             };
 
             using (var sender = new RequestSender(urls))
