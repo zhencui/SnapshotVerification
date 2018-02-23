@@ -57,10 +57,14 @@
   <ItemGroup>
     <Folder Include="cd-e2e-web-roleContent\" />
     <Folder Include="cd-e2e-worker-roleContent\" />
+    <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
     <DiagnosticsConfiguration Include="cd-e2e-web-roleContent\diagnostics.wadcfgx" />
     <DiagnosticsConfiguration Include="cd-e2e-worker-roleContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\cd-e2e-cloud-serviceProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

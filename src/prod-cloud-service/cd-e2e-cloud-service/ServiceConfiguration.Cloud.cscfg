@@ -3,14 +3,14 @@
   <Role name="cd-e2e-web-role">
     <Instances count="2" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=snapshotcollectortest;AccountKey=$(_snapshotcollectortest.key_)" />
       <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="85f4b8f4-6470-43bd-9b95-7bc77cd71ea7" />
     </ConfigurationSettings>
   </Role>
   <Role name="cd-e2e-worker-role">
     <Instances count="2" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=snapshotcollectortest;AccountKey=$(_snapshotcollectortest.key_)" />
       <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="03d6a447-43b4-4819-a57f-d6dca89ecfe3" />
     </ConfigurationSettings>
   </Role>
