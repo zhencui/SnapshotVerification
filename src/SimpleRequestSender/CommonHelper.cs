@@ -19,7 +19,10 @@ namespace SimpleRequestSender
                 "http://cd-prod-northeu-asp-netcore-20.azurewebsites.net/Home/About",
                 "http://cd-prod-northeu-asp-netcore-20.azurewebsites.net/Home/Contact",
                 "http://cd-prod-northeu-asp-net-46.azurewebsites.net/Home/About",
-                "http://cd-prod-northeu-asp-net-46.azurewebsites.net/Home/Contact"
+                "http://cd-prod-northeu-asp-net-46.azurewebsites.net/Home/Contact",
+
+                "http://cd-e2e-cloud-service.cloudapp.net/Home/About",
+                "http://cd-e2e-cloud-service.cloudapp.net/Home/Contact"
 
                 //"http://auto-light-up-asp-net46-old.azurewebsites.net/Home/About",
                 //"http://auto-light-up-asp-net46-old.azurewebsites.net/Home/Contact",
