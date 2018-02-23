@@ -55,8 +55,8 @@
     <Reference Include="Microsoft.ApplicationInsights, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationInsights.SnapshotCollector, Version=99.2018.222.2326, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.222.2326\lib\net45\Microsoft.ApplicationInsights.SnapshotCollector.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationInsights.SnapshotCollector, Version=99.2018.223.1311, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.223.1311\lib\net45\Microsoft.ApplicationInsights.SnapshotCollector.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
@@ -139,11 +139,11 @@
     -->
     <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
   </PropertyGroup>
-  <Import Project="..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.222.2326\build\Microsoft.ApplicationInsights.SnapshotCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.222.2326\build\Microsoft.ApplicationInsights.SnapshotCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.223.1311\build\Microsoft.ApplicationInsights.SnapshotCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.223.1311\build\Microsoft.ApplicationInsights.SnapshotCollector.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.222.2326\build\Microsoft.ApplicationInsights.SnapshotCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.222.2326\build\Microsoft.ApplicationInsights.SnapshotCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.223.1311\build\Microsoft.ApplicationInsights.SnapshotCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.SnapshotCollector.99.2018.223.1311\build\Microsoft.ApplicationInsights.SnapshotCollector.targets'))" />
   </Target>
 </Project>
