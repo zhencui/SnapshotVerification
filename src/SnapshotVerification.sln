@@ -23,6 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-westeu-aspnet46", "p
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cd-e2e-westeu-aspnetcore20", "prod-e2e\cd-e2e-westeu-aspnetcore20\cd-e2e-westeu-aspnetcore20.csproj", "{88A3DF9E-4506-4A29-B03E-67EBF096EB9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod-cloud-service", "prod-cloud-service", "{78590463-36FC-4B15-9320-29763620217C}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "cd-e2e-cloud-service", "prod-cloud-service\cd-e2e-cloud-service\cd-e2e-cloud-service.ccproj", "{54FE26BB-AEDD-4904-8698-5E6E6A546623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-web-role", "cd-e2e-web-role\cd-e2e-web-role.csproj", "{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-worker-role", "cd-e2e-worker-role\cd-e2e-worker-role.csproj", "{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedCode\SharedCode.projitems*{62a22b80-a111-440f-884c-c2c943a46b51}*SharedItemsImports = 13
@@ -64,6 +72,18 @@ Global
 		{88A3DF9E-4506-4A29-B03E-67EBF096EB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A3DF9E-4506-4A29-B03E-67EBF096EB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A3DF9E-4506-4A29-B03E-67EBF096EB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FE26BB-AEDD-4904-8698-5E6E6A546623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FE26BB-AEDD-4904-8698-5E6E6A546623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FE26BB-AEDD-4904-8698-5E6E6A546623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FE26BB-AEDD-4904-8698-5E6E6A546623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +93,9 @@ Global
 		{C16C03EC-437A-4A7A-93E6-FC8E0334AC91} = {3510303D-8C19-45BB-896D-75ACA3E5B1C9}
 		{2BBA64BA-08EE-4350-BC46-30E1A03B26E5} = {3510303D-8C19-45BB-896D-75ACA3E5B1C9}
 		{88A3DF9E-4506-4A29-B03E-67EBF096EB9B} = {3510303D-8C19-45BB-896D-75ACA3E5B1C9}
+		{54FE26BB-AEDD-4904-8698-5E6E6A546623} = {78590463-36FC-4B15-9320-29763620217C}
+		{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3} = {78590463-36FC-4B15-9320-29763620217C}
+		{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F} = {78590463-36FC-4B15-9320-29763620217C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71D09F4C-7D08-4BB3-AC6D-97903C412EEE}
