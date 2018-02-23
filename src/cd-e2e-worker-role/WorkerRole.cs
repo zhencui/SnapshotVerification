@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.ApplicationInsights;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
@@ -60,11 +61,20 @@ namespace cd_e2e_worker_role
 
         private async Task RunAsync(CancellationToken cancellationToken)
         {
-            // TODO: Replace the following with your own logic.
+            Trace.TraceInformation("Working");
+            var client = new TelemetryClient();
             while (!cancellationToken.IsCancellationRequested)
             {
-                Trace.TraceInformation("Working");
-                await Task.Delay(1000);
+                try
+                {
+                    await Task.Delay(1000);
+                    Worker w = new Worker(client);
+                    w.DoWork();
+                }
+                catch (Exception ex)
+                {
+                    client.TrackException(ex);
+                }
             }
         }
     }

@@ -59,13 +59,11 @@ namespace SimpleRequestSender
         {
             while (true)
             {
-                var minute = DateTime.Now.Minute;
-                if ((minute / 15) % 2 == 0)
+                if (CommonHelper.ShouldBlock())
                 {
-                    return;
+                    Log("Blocking");
+                    await Task.Delay(10000).ConfigureAwait(false);
                 }
-                Log("Blocking");
-                await Task.Delay(10000).ConfigureAwait(false);
             }
         }
 
