@@ -51,13 +51,14 @@ namespace cd_e2e_worker_role
 
         private async Task DoRequestWorks()
         {
-            if (!CommonHelper.ShouldBlock())
+            foreach (var url in CommonHelper.URLs)
             {
-                foreach (var url in CommonHelper.URLs)
+                if (!CommonHelper.ShouldBlock())
                 {
                     await WorkWrapperAsync(nameof(SendHttpRequestAsync), () => SendHttpRequestAsync(url)).ConfigureAwait(false);
                 }
             }
+
         }
 
         private async Task SendHttpRequestAsync(string url)

@@ -10,6 +10,8 @@ namespace SimpleRequestSender
     {
         public static List<string> URLs = new List<string>
             {
+                "http://cd-restart-doublecheck2-asp46.azurewebsites.net/Home/About",
+                "http://cd-restart-doublecheck2-asp46.azurewebsites.net/Home/Contact",
                 "http://cd-restart-doublecheck-asp46.azurewebsites.net/Home/About",
                 "http://cd-restart-doublecheck-asp46.azurewebsites.net/Home/Contact",
                 "https://cd-prod-westus2-asp-netcore-20.azurewebsites.net/Home/About",
