@@ -11,8 +11,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedCode", "SharedCode\Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRequestSender", "SimpleRequestSender\SimpleRequestSender.csproj", "{B32659A4-2F74-46CE-8206-37671FC0B387}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore20MvcEastUS", "AspNetCore20MvcEastUS\AspNetCore20MvcEastUS.csproj", "{2A35520F-DC48-412F-902C-EA71A24BCA39}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod-e2e", "prod-e2e", "{3510303D-8C19-45BB-896D-75ACA3E5B1C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-westus2-aspnet46", "prod-e2e\cd-e2e-westus2-aspnet46\cd-e2e-westus2-aspnet46.csproj", "{0FDC41DB-1EF7-4B1F-A630-0EB2F5B9ADFF}"
@@ -30,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-web-role", "cd-e2e-web-role\cd-e2e-web-role.csproj", "{FAC66CFB-1AA4-40BB-B962-5B1F6DCBA9A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd-e2e-worker-role", "cd-e2e-worker-role\cd-e2e-worker-role.csproj", "{E96B6490-0F2F-4296-97AC-BAFDA2D3E43F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod-service-fabric", "prod-service-fabric", "{FA6A767D-C8E5-42D2-922D-FF1EBDF9FFF9}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -52,10 +52,6 @@ Global
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32659A4-2F74-46CE-8206-37671FC0B387}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A35520F-DC48-412F-902C-EA71A24BCA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A35520F-DC48-412F-902C-EA71A24BCA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A35520F-DC48-412F-902C-EA71A24BCA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A35520F-DC48-412F-902C-EA71A24BCA39}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0FDC41DB-1EF7-4B1F-A630-0EB2F5B9ADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0FDC41DB-1EF7-4B1F-A630-0EB2F5B9ADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FDC41DB-1EF7-4B1F-A630-0EB2F5B9ADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
