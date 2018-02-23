@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ServiceConfiguration serviceName="cd_e2e_cloud_service" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
   <Role name="cd-e2e-web-role">
-    <Instances count="1" />
+    <Instances count="2" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="85f4b8f4-6470-43bd-9b95-7bc77cd71ea7" />
     </ConfigurationSettings>
   </Role>
   <Role name="cd-e2e-worker-role">
-    <Instances count="1" />
+    <Instances count="2" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="03d6a447-43b4-4819-a57f-d6dca89ecfe3" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

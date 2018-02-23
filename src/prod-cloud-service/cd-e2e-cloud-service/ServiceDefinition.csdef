@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="cd_e2e_cloud_service" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
-  <WebRole name="cd-e2e-web-role" vmsize="Small">
+  <WebRole name="cd-e2e-web-role" vmsize="Standard_D3_v2">
     <Sites>
       <Site name="Web">
         <Bindings>
@@ -10,14 +10,22 @@
     </Sites>
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
     </ConfigurationSettings>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
+    <LocalResources>
+      <LocalStorage name="SnapshotStore" cleanOnRoleRecycle="true" sizeInMB="5120" />
+    </LocalResources>
   </WebRole>
-  <WorkerRole name="cd-e2e-worker-role" vmsize="Small">
+  <WorkerRole name="cd-e2e-worker-role" vmsize="Standard_D2_v3">
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
     </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="SnapshotStore" cleanOnRoleRecycle="true" sizeInMB="5129" />
+    </LocalResources>
   </WorkerRole>
 </ServiceDefinition>
