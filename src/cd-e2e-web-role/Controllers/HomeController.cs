@@ -1,4 +1,5 @@
-﻿using SnapshotTest;
+﻿using Microsoft.ApplicationInsights;
+using SnapshotTest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,17 @@ namespace cd_e2e_web_role.Controllers
 
         public ActionResult Contact()
         {
+            var ai = new TelemetryClient();
+            try
+            {
+                CPUIntensiveComputation.RecusiveCall1(12);
+            }
+            catch (Exception ex)
+            {
+                ai.TrackException(ex);
+            }
             ViewBag.Message = "Your contact page.";
-            CPUIntensiveComputation.RecusiveCall1(12);
+
             return View();
         }
     }
