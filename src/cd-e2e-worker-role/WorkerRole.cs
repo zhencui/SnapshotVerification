@@ -21,6 +21,10 @@ namespace cd_e2e_worker_role
         public override void Run()
         {
             Trace.TraceInformation("cd-e2e-worker-role is running");
+            TelemetryClient client = new TelemetryClient();
+            // This is used for detect site restart.
+            client.TrackEvent("SiteStart");
+            client.Flush();
 
             try
             {
