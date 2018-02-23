@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SnapshotTest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,7 +24,7 @@ namespace cd_e2e_web_role.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            CPUIntensiveComputation.RecusiveCall1(12);
             return View();
         }
     }
