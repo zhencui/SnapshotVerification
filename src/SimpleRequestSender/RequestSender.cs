@@ -64,6 +64,10 @@ namespace SimpleRequestSender
                     Log("Blocking");
                     await Task.Delay(10000).ConfigureAwait(false);
                 }
+                else
+                {
+                    return;
+                }
             }
         }
 
