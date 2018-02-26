@@ -10,7 +10,7 @@ namespace SimpleRequestSender
 {
     public class RequestSender : IDisposable
     {
-        public RequestSender(List<string> urls, uint userCount = 5)
+        public RequestSender(List<string> urls, uint userCount = 7)
         {
             _userCount = userCount;
             _urls = urls;
