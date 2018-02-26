@@ -23,6 +23,23 @@ namespace SimpleRequestSender
                 "http://cd-prod-northeu-asp-net-46.azurewebsites.net/Home/About",
                 "http://cd-prod-northeu-asp-net-46.azurewebsites.net/Home/Contact",
 
+                "http://cd-prod-inject-wcus-64bit.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-wcus-64bit.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-wcus-32bit.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-wcus-32bit.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-wcus-disable.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-wcus-disable.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-wcus-empty.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-wcus-empty.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-weu-64bit.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-weu-64bit.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-weu-32bit.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-weu-32bit.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-weu-disable.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-weu-disable.azurewebsites.net/Home/Contact",
+                "http://cd-prod-inject-weu-empty.azurewebsites.net/Home/About",
+                "http://cd-prod-inject-weu-empty.azurewebsites.net/Home/Contact",
+
                 "http://cd-e2e-cloud-service.cloudapp.net/Home/About",
                 "http://cd-e2e-cloud-service.cloudapp.net/Home/Contact"
 
