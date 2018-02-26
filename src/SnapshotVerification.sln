@@ -33,9 +33,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod-service-fabric", "prod
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "cd_e2e_sf_app", "cd-e2e-sf-app\cd_e2e_sf_app.sfproj", "{F5EEFB55-9577-4474-A6B9-72E639EB7834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd_e2e_sf_web", "cd_e2e_sf_web\cd_e2e_sf_web.csproj", "{69267E43-C0EA-4EEB-9E92-42251DCC437A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cd_e2e_sf_web", "cd_e2e_sf_web\cd_e2e_sf_web.csproj", "{69267E43-C0EA-4EEB-9E92-42251DCC437A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cd_e2e_sf_worker", "cd_e2e_sf_worker\cd_e2e_sf_worker.csproj", "{00B03D52-6106-44F8-A6DC-3FB504113137}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cd_e2e_sf_worker", "cd_e2e_sf_worker\cd_e2e_sf_worker.csproj", "{00B03D52-6106-44F8-A6DC-3FB504113137}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auto-inject", "auto-inject", "{D473649C-F201-44C2-9BF2-A9B109EAD383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inject-app-asp-net-core-20", "inject-app-asp-net-core-20\inject-app-asp-net-core-20.csproj", "{FAD61F88-28FC-4013-8974-0C2C8C7BA941}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -152,6 +156,14 @@ Global
 		{00B03D52-6106-44F8-A6DC-3FB504113137}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00B03D52-6106-44F8-A6DC-3FB504113137}.Release|x64.ActiveCfg = Release|Any CPU
 		{00B03D52-6106-44F8-A6DC-3FB504113137}.Release|x64.Build.0 = Release|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Debug|x64.Build.0 = Debug|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Release|x64.ActiveCfg = Release|Any CPU
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +179,7 @@ Global
 		{F5EEFB55-9577-4474-A6B9-72E639EB7834} = {FA6A767D-C8E5-42D2-922D-FF1EBDF9FFF9}
 		{69267E43-C0EA-4EEB-9E92-42251DCC437A} = {FA6A767D-C8E5-42D2-922D-FF1EBDF9FFF9}
 		{00B03D52-6106-44F8-A6DC-3FB504113137} = {FA6A767D-C8E5-42D2-922D-FF1EBDF9FFF9}
+		{FAD61F88-28FC-4013-8974-0C2C8C7BA941} = {D473649C-F201-44C2-9BF2-A9B109EAD383}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71D09F4C-7D08-4BB3-AC6D-97903C412EEE}
