@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.ApplicationInsights.SnapshotCollector" Version="99.2018.227.1340" />
+    <PackageReference Include="Microsoft.ApplicationInsights.SnapshotCollector" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
