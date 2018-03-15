@@ -67,6 +67,7 @@ namespace cd_e2e_worker_role
         {
             Trace.TraceInformation("Working");
             var client = new TelemetryClient();
+            client.InstrumentationKey = "03d6a447-43b4-4819-a57f-d6dca89ecfe3";
             while (!cancellationToken.IsCancellationRequested)
             {
                 try
