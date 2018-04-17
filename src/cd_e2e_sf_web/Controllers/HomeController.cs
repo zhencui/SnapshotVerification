@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using cd_e2e_sf_web.Models;
+using SnapshotTest;
 
 namespace cd_e2e_sf_web.Controllers
 {
@@ -12,6 +13,7 @@ namespace cd_e2e_sf_web.Controllers
     {
         public IActionResult Index()
         {
+            CPUIntensiveComputation.RecusiveCall1(11);
             return View();
         }
 
