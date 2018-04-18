@@ -5,9 +5,12 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ApplicationInsights;
+using Microsoft.ApplicationInsights.SnapshotCollector;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using SnapshotTest;
+using Microsoft.ApplicationInsights.DataContracts;
 
 namespace cd_e2e_sf_worker
 {
@@ -16,9 +19,24 @@ namespace cd_e2e_sf_worker
     /// </summary>
     internal sealed class cd_e2e_sf_worker : StatelessService
     {
+        private readonly TelemetryClient telemetryClient;
+        private readonly TelemetryConfiguration telemetryConfiguration;
+
         public cd_e2e_sf_worker(StatelessServiceContext context)
             : base(context)
-        { }
+        {
+            telemetryConfiguration = new TelemetryConfiguration("");
+            telemetryConfiguration.TelemetryProcessorChainBuilder.UseSnapshotCollector(new SnapshotCollectorConfiguration
+            {
+                IsEnabledInDeveloperMode = true
+            });
+
+            telemetryConfiguration.TelemetryInitializers.Add(new OperationCorrelationTelemetryInitializer());
+
+            telemetryClient = new TelemetryClient(telemetryConfiguration);
+
+            var ignored = telemetryConfiguration.TelemetryProcessors;
+        }
 
         /// <summary>
         /// Optional override to create listeners (e.g., TCP, HTTP) for this service replica to handle client or user requests.
@@ -39,23 +57,27 @@ namespace cd_e2e_sf_worker
             //       or remove this RunAsync override if it's not needed in your service.
 
             long iterations = 0;
-            var client = new TelemetryClient();
+            var client = telemetryClient;
 
             while (true)
             {
-                cancellationToken.ThrowIfCancellationRequested();
-
-                ServiceEventSource.Current.ServiceMessage(this.Context, "Working-{0}", ++iterations);
-
-                await Task.Delay(TimeSpan.FromSeconds(100), cancellationToken);
-
-                try
+                using (var operation = telemetryClient.StartOperation<RequestTelemetry>("RunAsync", $"Op{iterations}"))
                 {
-                    CPUIntensiveComputation.RecusiveCall1(1);
-                }
-                catch (Exception e)
-                {
-                    client.TrackException(e);
+                    cancellationToken.ThrowIfCancellationRequested();
+
+                    ServiceEventSource.Current.ServiceMessage(this.Context, "Working-{0}", ++iterations);
+
+                    await Task.Delay(TimeSpan.FromSeconds(100), cancellationToken);
+
+                    try
+                    {
+                        CPUIntensiveComputation.RecusiveCall1(12);
+                    }
+                    catch (Exception e)
+                    {
+                        client.TrackException(e);
+                        operation.Telemetry.Success = false;
+                    }
                 }
             }
         }
