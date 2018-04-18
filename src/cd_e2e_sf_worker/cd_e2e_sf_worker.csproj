@@ -14,4 +14,6 @@
     <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.467" />
   </ItemGroup>
 
+  <Import Project="..\SharedCode\SharedCode.projitems" Label="Shared" />
+
 </Project>

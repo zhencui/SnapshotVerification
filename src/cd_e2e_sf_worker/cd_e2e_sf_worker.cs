@@ -4,8 +4,10 @@ using System.Fabric;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.ApplicationInsights;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using SnapshotTest;
 
 namespace cd_e2e_sf_worker
 {
@@ -37,6 +39,7 @@ namespace cd_e2e_sf_worker
             //       or remove this RunAsync override if it's not needed in your service.
 
             long iterations = 0;
+            var client = new TelemetryClient();
 
             while (true)
             {
@@ -44,7 +47,16 @@ namespace cd_e2e_sf_worker
 
                 ServiceEventSource.Current.ServiceMessage(this.Context, "Working-{0}", ++iterations);
 
-                await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
+                await Task.Delay(TimeSpan.FromSeconds(100), cancellationToken);
+
+                try
+                {
+                    CPUIntensiveComputation.RecusiveCall1(1);
+                }
+                catch (Exception e)
+                {
+                    client.TrackException(e);
+                }
             }
         }
     }
